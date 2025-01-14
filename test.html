@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const x = true;
+        const y = false;
+
+        let data = ['강아지','고양이','앵무새'];
+
+        console.log( x && data) // 10출력
+        console.log( y && data) // false출력
+
+        console.log( x || data) // true출력
+        console.log( y || data) // 10출력
+        
+        /*
+        결론 : 
+        and (&&): 앞이 true -> 뒤쪽 항이 처리 된다
+        or (||) : 앞이 false -> 뒤쪽 항이 처리 된다.
+        
+        */
+        let result = ''
+
+        result= data?.[0] || '기본출력';
+        console.log(result)
+        
+        data = null
+        
+        result = data?.[0] || '기본출력';
+        console.log(result)
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+body{background-color: #444;}
+a{text-decoration: none;}
+button{
+  background-color: transparent; border: 0;
+  padding: 3px 12px; margin: 0 0 0 0.5rem; border-radius: 3px;
+}
+button.btn{background-color: #000; color: #fff;}
+button.list, 
+button.cancle{background-color: white; color: #000; border: 1px solid #000;}
+
+/* header */
+.header{
+  display: flex; justify-content: space-between;
+  width: 100%; padding: 2rem 10vw; 
+  background-color: #444; color: #fff; 
+}
+.header .logo{margin-right: 2rem;}
+.header .gnb{display: flex; align-items: center; }
+.header .utilMenu{display: flex; align-items: center; font-size: 14px;}
+.header a{ color: #fff; text-transform: uppercase;}
+.header .gnb a{padding: 0 1rem; }
+.header .utilMenu a{padding: 0 0.75rem; font-size: 13px;}
+
+
+
+/* Basic Layout */
+.container{
+  display: flex; gap : 1rem;
+  width: 100%; 
+  margin: 1rem 0;  padding: 0 10vw; }
+.container main,
+.container aside{padding : 2em; background-color :#EEE;border-radius: 0.5rem;}
+.container main {flex: 4; }
+.container aside { flex: 1;}
+
+
+.content{ padding: 2rem 1rem; }
+.content .menu > button{ margin-right : 1rem ; font : bold 16px 'inherit'; text-decoration : underline; }
+.content .btnGroup{display: flex; justify-content: flex-end;}
+
+
+.content li {display: flex; border-bottom: #ddd 1px solid;}
+
+/* ListPage - 목록페이지 */
+.content ul.list{padding: 2rem 0; }
+.content .list li{display: flex; padding: 0.5rem 0;}
+.content .list li span.tno{flex:1; }
+.content .list li span.title{flex:5; text-align: left;}
+.content .list li span{flex:2.5; text-align: center; white-space: nowrap;}
+.content .list li.header span.title{text-align: center;}
+
+/* Read, Add, Modify - Item 공통css */
+.content .item {margin: 2rem 0;}
+.content .item li:last-of-type{border:0}
+.content .item li .labelWrap{flex: 1; padding: 0.5rem 1rem; text-align: right;}
+.content .item li .dataWrap{flex: 5; padding: 0.5rem 1rem;}
+
+.content .item li input{  width: 100%;min-width: 200px; padding: 5px 10px; border: 1px solid #ddd; }
+.content .item li input[type=radio]{ min-width: 30px;}
+.content .item li textarea{width: 100%; min-width: 200px; height: 300px;padding: 5px 10px; border: 1px solid #ddd;}
+
+/* 읽기전용 필드 */
+.content .item li.readOnly input{ background-color: transparent;border: 0; outline: 0;}
+.content .item li.readOnly textarea{ height: auto;background-color: transparent;border: 0; outline: 0;}
+
+.content .pagination{text-align: center;}
+.content .pagination a{padding: 0 0.5rem;}
+
+/* Modal */
+
+.modal{
+
+  position: fixed; left: 50%; top: 50%; /* 현재창 정가운데 맞춤 */
+  transform: translate(-50%,-50%);
+
+  padding: 5rem 10rem;
+  background-color: #ffffffee; 
+  border-radius: 10px; border: 1px solid #333;
+
+  /* 자식요소 정가운데 맞춤 */
+  display: flex; 
+  flex-direction: column; /* 세로 배열 */
+  justify-content: center; align-items: center;
+}
+
+.modal.result h2{ white-space:nowrap;}
+.modal.result p{margin: 20px 0; }
+
+
