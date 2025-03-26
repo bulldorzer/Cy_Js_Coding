@@ -1,6 +1,6 @@
 import jwtAxios from "../util/jwtUtil";
 
-export const API_SERVER_PORT = "http://localhost:8080";
+export const API_SERVER_PORT = "http://localhost:8081";
 
 const prefix = `${API_SERVER_PORT}/api/todo`;
 

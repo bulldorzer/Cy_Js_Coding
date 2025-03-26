@@ -65,7 +65,7 @@ const beforeRes = async (res) => {
             });
         }
 
-        const result = await (memberCookieValue.accessToken, memberCookieValue.refreshToken)
+        const result = await refreshJWT(memberCookieValue.accessToken, memberCookieValue.refreshToken)
         console.log("resfresshJWT RESULT", result)
 
         // 요청 결과를 가지고 -> 현재 쿠키를 업데이트함
